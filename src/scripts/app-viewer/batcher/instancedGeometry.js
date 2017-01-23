@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const THREE = require('three');
 
 function _createBBox(point, width, height, depth) {
     const min = new THREE.Vector3(-width / 2.0, 0.0, -depth / 2.0);
