@@ -20,8 +20,8 @@ class Controls {
     }
 
     resetCameraOrbit() {
-        this.camera.position.fromArray(config.camera.cameraPos);
-        this.camera.lookAt((new THREE.Vector3()).fromArray(config.camera.cameraTarget));
+        this.camera.position.fromArray(config.camera.pos);
+        this.camera.lookAt((new THREE.Vector3()).fromArray(config.camera.target));
         this.camera.near = config.camera.near;
         this.camera.far = config.camera.far;
         this.camera.updateProjectionMatrix();
