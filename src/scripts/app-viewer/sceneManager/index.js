@@ -36,6 +36,10 @@ class SceneManager {
             config.water.normalMaps.push(this.assetsLoader.assets.textures.waterTex, this.assetsLoader.assets.textures.waterTex2);
         }
 
+        if (config.equalizer) {
+            config.equalizer.map.value = this.assetsLoader.assets.textures.eqTex;
+        }
+
         this.batcher.batchSameGeomIdUndecoratedMeshes({
             batchMeshesWithChildren: true,
             excludeIfNameContains: []

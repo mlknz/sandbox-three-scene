@@ -2,9 +2,10 @@ import config from '../config.js';
 
 import SceneManager from './sceneManager';
 import Controls from '../controls';
-// import Starfield from './prefabs/starfield.js';
+import Starfield from './prefabs/starfield.js';
 import Grass from './prefabs/grass.js';
 import Water from './prefabs/water.js';
+import Equalizer from './prefabs/equalizer.js';
 
 class AppViewer {
     constructor(renderer) {
@@ -28,13 +29,17 @@ class AppViewer {
         this.controls = new Controls(this.camera, this.renderer.domElement);
         this.controls.resetCameraOrbit();
 
-        // this.starfield = new Starfield(this.renderer, this.sceneManager.scene);
+        this.starfield = new Starfield(this.renderer, this.sceneManager.scene);
 
         const grassMesh = this.sceneManager.scene.getObjectByName('grass_instancedMesh');
         this.grass = new Grass(grassMesh);
 
         const waterMesh = this.sceneManager.scene.getObjectByName('water');
         this.water = new Water(waterMesh);
+
+        this.equalizer = new Equalizer();
+        this.equalizer.mesh.position.y = 0.5;
+        this.sceneManager.scene.add(this.equalizer.mesh);
     }
 
     update(dt) {
@@ -46,6 +51,8 @@ class AppViewer {
 
         this.grass.update(config.time);
         this.water.update(config.time);
+        this.equalizer.update(config.time);
+
         this.renderer.render(this.sceneManager.scene, this.camera);
     }
 

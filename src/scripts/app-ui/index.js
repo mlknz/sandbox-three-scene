@@ -27,9 +27,16 @@ class AppUi {
         waterFolder.add(config.water.detail2, 'value').min(0).max(1).step(0.05).name('Detail2');
         waterFolder.add(config.water.detail3, 'value').min(0).max(1).step(0.05).name('Detail3');
 
+        const eqFolder = gui.addFolder('Equalizer');
+        eqFolder.add(config.equalizer.loudness.value, 'x').min(0).max(1).step(0.05).name('Loudness1');
+        eqFolder.add(config.equalizer.loudness.value, 'y').min(0).max(1).step(0.05).name('Loudness2');
+        eqFolder.add(config.equalizer.loudness.value, 'z').min(0).max(1).step(0.05).name('Loudness3');
+        eqFolder.add(config.equalizer.loudness.value, 'w').min(0).max(1).step(0.05).name('Loudness4');
+
         gui.open();
         grassFolder.open();
         waterFolder.open();
+        eqFolder.open();
     }
 
     changeWaterTex() {

@@ -24,6 +24,11 @@ const sceneDescription = {
             name: 'waterTex2',
             type: 'texture',
             path: 'assets/textures/water_normal.png'
+        },
+        {
+            name: 'eqTex',
+            type: 'texture',
+            path: 'assets/textures/eq_tex.png'
         }
     ],
     model: {

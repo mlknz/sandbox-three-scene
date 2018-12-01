@@ -45,6 +45,11 @@ const config = {
 
         normalMap: {value: null},
         normalMaps: []
+    },
+
+    equalizer: {
+        map: {value: null},
+        loudness: {value: new THREE.Vector4(1, 1, 1, 1)}
     }
 };
 
