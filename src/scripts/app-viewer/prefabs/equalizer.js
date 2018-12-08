@@ -18,9 +18,9 @@ class Equalizer {
             loudness: config.equalizer.loudness
         };
 
-        uniforms.map.anisotropy = false;
-        uniforms.map.minFilter = THREE.NearestFilter;
-        uniforms.map.magFilter = THREE.NearestFilter;
+        uniforms.map.value.anisotropy = false;
+        uniforms.map.value.minFilter = THREE.NearestFilter;
+        uniforms.map.value.magFilter = THREE.NearestFilter;
 
         const eqMaterial = new THREE.RawShaderMaterial({
             vertexShader: eqVert,

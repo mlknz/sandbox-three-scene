@@ -22,19 +22,19 @@ void main() {
     }
     else if (info < 0.155) // 0.08 to 0.16
     {
-        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.08) / 0.08, loudness.x));
+        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.075) / 0.08, loudness.x));
     }
     else if (info < 0.235) // 0.16 to 0.24
     {
-        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.16) / 0.08, loudness.y));
+        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.155) / 0.08, loudness.y));
     }
     else if (info < 0.315) // 0.24 to 0.32
     {
-        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.24) / 0.08, loudness.z));
+        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.235) / 0.08, loudness.z));
     }
     else if (info < 0.475) // 0.32 to 0.40
     {
-        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.32) / 0.08, loudness.w));
+        col = mix(vec3(0.2, 0.0, 0.0), col, step((info - 0.315) / 0.08, loudness.w));
     }
 
 
